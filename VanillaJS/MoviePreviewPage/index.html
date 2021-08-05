@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Cinema</title>
+    <link rel="stylesheet" href="src/css/reset.css">
+    <link rel="stylesheet" href="src/css/style.css">
+</head>
+
+<body>
+    <h1 class="sr-only">My Cinema</h1>
+    <section class="container-movie">
+        <h2 class="title-container">Cinema Movie List</h2>
+        <!--header도 sectioning요소-->
+        <header>
+            <h3 class="sr-only">Movie List</h3>
+            <nav class="nav-movie">
+                <!--ul-li는 보통 ul에만 class넣고 접근하는 편-->
+                <ul class="list-movie">
+                    <!--#none은 페이지 새로고침을 막는다-->
+                    <li class="on"><a href="#none">Showing Movies</a></li>
+                    <li><a href="#none">Upcoming Movies</a></li>
+                    <li><a href="#none">Boxoffice</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section>
+            <h3 class="sr-only">currently showing movies</h3>
+            <ul class="list-movieInformation">
+                <li>
+                    <!--article도 sectioning요소-->
+                    <article>
+                        <h4 class="sr-only">Movie Information</h4>
+                        <a href="#none" class="link-movie">
+                            <img src="src/img/" alt="(영화제목)">
+                        </a>
+                        <strong class="title-movie sl-ellipsis">(영화제목)</strong>
+                        <!--ul,ol,dl중 dl은 유일하게 자식요소로 div 가능-->
+                        <dl class="list-information">
+                            <div>
+                                <dt>개요</dt>
+                                <dd>판타지</dd>
+                            </div>
+                            <div class="item-star">
+                                <dt>평점</dt>
+                                <dd>9.0</dd>
+                            </div>
+                            <div>
+                                <dt>개봉</dt>
+                                <dd>2021.08.05</dd>
+                            </div>
+                            <div>
+                                <dt>출연</dt>
+                                <dd class="multi-ellipsis">상민,성호,명훈,상민,성호,명훈,상민,성호,명훈</dd>
+                            </div>
+                        </dl>
+                    </article>
+                    <a href="#none" class="link-reserve">Reserve</a>
+                    <a href="#none" class="link-teaser">Teaser</a>
+                </li>
+            </ul>
+        </section>
+    </section>
+    <footer class="container-company">
+        <section class="container-companyInformation">
+            <h2 class="sr-only">기업정보</h2>
+            <strong class="title-company">My Cinema</strong>
+            <dl class="list-companyInformation">
+                <dt class="sr-only">사명</dt>
+                <dd>(주)My Cinema</dd>
+                <dt>대표</dt>
+                <dd>(주)My Cinema</dd>
+                <dt>사업자번호</dt>
+                <dd>000-0000-000</dd>
+                <dd>000-0000-000</dd>
+                <dt>주소</dt>
+                <dd>서울 동작구</dd>
+            </dl>
+            <em class="sr-only">SNS link list</em>
+            <ul class="list-sns">
+                <li><a href="#none">트위터</a></li>
+                <li><a href="#none">인스타그램</a></li>
+                <li><a href="#none">페이스북</a></li>
+            </ul>
+            <!--저작권 관련 small태그 사용하는 편.-->
+            <small class="text-copy">Copyright &copy;SM</small>
+        </section>
+    </footer>
+</body>
+
+</html>

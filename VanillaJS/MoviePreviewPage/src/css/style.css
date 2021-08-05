@@ -1,0 +1,214 @@
+@charset "utf-8";
+
+/* utility */
+
+/* 스크린 리더 전용 : 화면에 표시될 필요는 없는 부분? */
+.sr-only {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+/* 한줄 말 줄임 */
+.sl-ellipsis {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* 두줄 말 줄임 */
+.multi-ellipsis {
+    overflow: hidden;
+    /* 실험적인 기능 */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+/* 컨테이너 스타일 */
+.container-movie {
+    width: 1060px;
+    margin: 86px auto 0;
+    padding: 0 27px 29px;
+    border: 2px solid #BDBDBD;
+    border-radius: 15px;
+    background-color: #E5E5E5;
+}
+
+.container-movie .title-container {
+    font-size: 24px;
+    text-align: center;
+    font-weight: bold;
+    line-height: 28px;
+    padding: 38px 0;
+}
+
+/* nav 스타일 */
+.container-movie .nav-movie {
+    text-align: center;
+}
+
+.container-movie .nav-movie::before {
+    display: block;
+    content: "";
+    width: 650px;
+    height: 2px;
+    background-color: #bdbdbd;
+    margin: 0 auto;
+}
+
+.container-movie .list-movie {
+    display: inline-block;
+    margin: 27px 0;
+}
+
+.container-movie .list-movie li {
+    float: left;
+}
+
+.container-movie .list-movie li+li {
+    margin-left: 60px;
+}
+
+.container-movie .list-movie li a {
+    color: #828282;
+}
+
+.container-movie .list-movie .on a {
+    color: black;
+    font-weight: bold;
+}
+
+/* 컨텐츠 스타일 */
+.container-movie .list-movieInformation {
+    overflow: hidden;
+    padding: 0 12px 24px 12px;
+    border: 2px solid #bdbdbd;
+    border-radius: 15px;
+    background-color: #fff;
+}
+
+.container-movie .list-movieInformation .title-movie {
+    font-weight: bold;
+    line-height: 23px;
+}
+
+.container-movie .list-movieInformation li {
+    overflow: hidden;
+    float: left;
+    border: 1px solid #bdbdbd;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    margin: 24px 12px 0;
+}
+
+
+.container-movie .list-movieInformation li>a[class^="link"] {
+    display: inline-block;
+    width: 50%;
+    text-align: center;
+    float: left;
+    height: 41px;
+    line-height: 41px;
+    background-color: #f2f2f2;
+    border-top: 1px solid #bdbdbd;
+}
+
+.container-movie .list-movieInformation li .link-reserve::after {
+    display: inline-block;
+    float: right;
+    content: "";
+    width: 1px;
+    height: 100%;
+    background-color: #bdbdbd;
+}
+
+.container-movie .list-movieInformation li .link-teaser::before {
+    display: inline-block;
+    content: "";
+    width: 16px;
+    height: 16px;
+    background: url();
+    vertical-align: top;
+    margin: 11px 2px 0 0;
+}
+
+.container-movie .list-movieInformation .link-movie {
+    display: block;
+    margin-bottom: 11px;
+}
+
+.list-movieInformation .list-information {
+    margin-top: 12px;
+}
+
+.list-movieInformation article {
+    width: 180px;
+    padding: 19px 19px 0 19px;
+}
+
+.list-movieInformation .list-information dt,
+.list-movieInformation .list-information dd {
+    display: inline-block;
+    font-size: 13px;
+    vertical-align: top;
+    line-height: 1.2;
+}
+
+.list-movieInformation .list-information dt {
+    font-weight: lighter;
+    color: #828282;
+}
+
+.list-movieInformation .list-information .multi-ellipsis {
+    width: 140px;
+    height: 28px;
+    float: right;
+    display: -webkit-box;
+    margin-left: 5px;
+}
+
+.list-movieInformation .list-information .item-star {
+    float: right;
+}
+
+.list-movieInformation .list-information .item-star dt::after {
+    display: inline-block;
+    content: "";
+    width: 14px;
+    height: 13px;
+    margin-left: 5px;
+    background: url();
+    vertical-align: top;
+}
+
+.list-movieInformation .list-information div {
+    display: inline-block;
+}
+
+/* 푸터 디자인 */
+.container-company {
+    background-color: #f2f2f2;
+    margin-top: 135px;
+}
+
+.container-company {
+    position: relative;
+    overflow: hidden;
+    width: 1189px;
+    margin: 0 auto;
+}
+
+
+.container-company .title-company{
+    display: block;
+    font-size: 22px;
+    height: 118px;
+    line-height: 118px;
+    border-bottom: 2px solid #c4c4c4;
+    font-weight: 700;
+}
