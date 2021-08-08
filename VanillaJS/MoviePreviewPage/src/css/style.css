@@ -1,7 +1,6 @@
 @charset "utf-8";
 
 /* utility */
-
 /* 스크린 리더 전용 : 화면에 표시될 필요는 없는 부분? */
 .sr-only {
     position: absolute;
@@ -29,14 +28,32 @@
     -webkit-box-orient: vertical;
 }
 
-/* 컨테이너 스타일 */
+/* skip navigation */
+.nav-skip a {
+    position: absolute;
+    top: -200px;
+    left: 0;
+    width: 160px;
+    line-height: 30px;
+    border: 1px solid #fff;
+    color: white;
+    background-color: #333;
+    text-align: center;
+}
+
+.nav-skip a:active,
+.nav-skip a:focus {
+    top: 0;
+}
+
+/* container style */
 .container-movie {
     width: 1060px;
     margin: 86px auto 0;
     padding: 0 27px 29px;
     border: 2px solid #BDBDBD;
     border-radius: 15px;
-    background-color: #E5E5E5;
+    background-color: white;
 }
 
 .container-movie .title-container {
@@ -103,7 +120,7 @@
     border: 1px solid #bdbdbd;
     border-radius: 10px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-    margin: 24px 12px 0;
+    margin: 24px 18px 0;
 }
 
 
@@ -132,9 +149,10 @@
     content: "";
     width: 16px;
     height: 16px;
-    background: url();
+    background: url(../img/teaserbutton.png);
+    background-size: cover;
     vertical-align: top;
-    margin: 11px 2px 0 0;
+    margin: 13px 2px 0 0;
 }
 
 .container-movie .list-movieInformation .link-movie {
@@ -176,13 +194,15 @@
     float: right;
 }
 
-.list-movieInformation .list-information .item-star dt::after {
+.list-movieInformation .list-information .item-star dt:after {
     display: inline-block;
     content: "";
-    width: 14px;
-    height: 13px;
-    margin-left: 5px;
-    background: url();
+    width: 12px;
+    height: 12px;
+    margin-left: 8px;
+    margin-top: 2px;
+    background: url(../img/star.png);
+    background-size: cover;
     vertical-align: top;
 }
 
@@ -192,7 +212,7 @@
 
 /* 푸터 디자인 */
 .container-company {
-    background-color: #f2f2f2;
+    background-color: #fefefe;
     margin-top: 135px;
 }
 
@@ -204,11 +224,94 @@
 }
 
 
-.container-company .title-company{
+.container-company .title-company {
     display: block;
     font-size: 22px;
     height: 118px;
     line-height: 118px;
     border-bottom: 2px solid #c4c4c4;
     font-weight: 700;
+}
+
+.container-company .list-companyInformation {
+    float: left;
+    margin: 38px 0;
+}
+
+.container-company .list-companyInformation dt,
+.container-company .list-companyInformation dd {
+    display: inline-block;
+    float: left;
+}
+
+.container-company .list-companyInformation dt {
+    font-weight: 700;
+    margin-right: 5px;
+}
+
+.container-company .list-companyInformation dd {
+    font-weight: 400;
+}
+
+.container-company .list-companyInformation dd:after {
+    display: inline-block;
+    content: "";
+    width: 1px;
+    height: 12px;
+    margin: 0 7px;
+    background-color: black;
+}
+
+.container-company .list-companyInformation dd:last-child:after {
+    display: none;
+}
+
+.container-company .list-sns {
+    position: absolute;
+    overflow: hidden;
+    top: 50px;
+    right: 0;
+}
+
+.container-company .list-sns li {
+    float: left;
+    margin-left: 22px;
+}
+
+.container-company .list-sns a[class^="link"] {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    font-size: 1px;
+    text-indent: -9999px;
+    overflow: hidden;
+}
+
+.container-company .list-sns li:first-child {
+    background: url(../img/twittericon.png);
+    background-size: cover;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+}
+
+.container-company .list-sns li:nth-child(2) {
+    background: url(../img/instagramicon.png);
+    background-size: cover;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+}
+
+.container-company .list-sns li:last-child {
+    background: url(../img/facebookicon.png);
+    background-size: cover;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+}
+
+.container-company .text-copy {
+    float: right;
+    margin-top: 35px;
 }
