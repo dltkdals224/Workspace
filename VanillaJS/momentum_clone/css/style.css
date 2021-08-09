@@ -1,0 +1,203 @@
+/*browser마다 기본적으로 제공하는 margin과 padding값 초기화*/
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.hidden {
+    display: none;
+}
+
+.background {
+    position: fixed;
+    min-width: 100%;
+    min-height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -10;
+}
+
+.line-through {
+    text-decoration-line: line-through;
+    text-decoration-style: double;
+    text-decoration-color: whitesmoke;
+}
+
+.main #login-form input {
+    display: flex;
+    width: 400px;
+    height: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: transparent;
+    border-width: 2px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 3px solid white;
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    text-decoration-color: white;
+}
+
+.main #login-form button {
+    display: flex;
+    width: 75px;
+    height: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: transparent;
+    border-width: 2px;
+    border: 3px solid white;
+    cursor: pointer;
+    color: white;
+    font-size: 20px;
+    text-decoration-color: white;
+}
+
+.main #logout-form button {
+    display: flex;
+    width: 90px;
+    height: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: transparent;
+    border-width: 2px;
+    border: 3px solid white;
+    cursor: pointer;
+    color: white;
+    font-size: 20px;
+    text-decoration-color: white;
+}
+
+
+.main #clock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin-top: 250px;
+    font-size: 96px;
+    font-weight: bolder;
+}
+
+#greeting {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 48px;
+    font-weight: bolder;
+}
+
+.main #todo-form input {
+    display: flex;
+    width: 500px;
+    height: 40px;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: transparent;
+    border-width: 2px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 3px solid white;
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    text-decoration-color: white;
+}
+
+li {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    color: white;
+    margin: 8px;
+}
+
+.main text {
+    color: yellowgreen;
+    margin-left: 8px;
+}
+
+#quote {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    color: white;
+}
+
+#weather {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    color: white;
+    margin-top: -90px;
+    margin-bottom: 50px;
+    font-size: 18px;
+}
+
+/* 상단바 */
+.search {
+    display: flex;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+
+.search button {
+    background-color: transparent;
+    border: none;
+}
+
+.search button .img-button {
+    border: none;
+    background: transparent;
+    font-size: 1.125rem;
+}
+
+.search .fas {
+    color: white;
+}
+
+.search .keyword {
+    border: none;
+    border-bottom: 1px solid white;
+    outline: none;
+    background: transparent;
+    width: 300px;
+    color: white;
+    font-size: 1.063rem;
+    font-style: "Malgun Gothic";
+    opacity: 0;
+    transition: 0.4s;
+}
+
+.search select {
+    border: none;
+    outline: none;
+    width: 80px;
+    font-size: 1.125rem;
+    font-weight: 200;
+    background: transparent;
+    margin-left: 20px;
+    color: white;
+    opacity: 0;
+    transition: 0.4s;
+}
+
+.search select option {
+    background-color: gray;
+}
+
+.search:hover>.keyword {
+    opacity: 1;
+}
+
+.search:hover>select {
+    opacity: 1;
+}
