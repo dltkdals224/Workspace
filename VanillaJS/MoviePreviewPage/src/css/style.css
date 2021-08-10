@@ -1,6 +1,23 @@
 @charset "utf-8";
 
 /* utility */
+/* 스크린 숨기기 */
+.hidden {
+    display: none;
+}
+
+.clickOn {
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.clickOff {
+    color: #828282;
+    font-weight: lighter;
+    cursor: pointer;
+}
+
 /* 스크린 리더 전용 : 화면에 표시될 필요는 없는 부분? */
 .sr-only {
     position: absolute;
@@ -91,14 +108,6 @@
     margin-left: 60px;
 }
 
-.container-movie .list-movie li a {
-    color: #828282;
-}
-
-.container-movie .list-movie .on a {
-    color: black;
-    font-weight: bold;
-}
 
 /* 컨텐츠 스타일 */
 .container-movie .list-movieInformation {
@@ -107,6 +116,17 @@
     border: 2px solid #bdbdbd;
     border-radius: 15px;
     background-color: #fff;
+}
+
+.container-movie .list-movieInformation .boxoffice_rank {
+    position: absolute;
+    overflow: hidden;
+    width: 24px;
+    height: 24px;
+    background-color: #828282;
+    font-size: 18px;
+    text-align: center;
+    color:white;
 }
 
 .container-movie .list-movieInformation .title-movie {
@@ -166,7 +186,12 @@
 
 .list-movieInformation article {
     width: 180px;
-    padding: 19px 19px 0 19px;
+    padding: 19px 19px 12px 19px;
+}
+
+.list-movieInformation .boxoffice_article {
+    width: 140px;
+    padding: 12px 12px 12px 12px;
 }
 
 .list-movieInformation .list-information dt,
@@ -184,7 +209,7 @@
 
 .list-movieInformation .list-information .multi-ellipsis {
     width: 140px;
-    height: 28px;
+    height: 30px;
     float: right;
     display: -webkit-box;
     margin-left: 5px;
@@ -204,6 +229,10 @@
     background: url(../img/star.png);
     background-size: cover;
     vertical-align: top;
+}
+
+.list-movieInformation .list-information .item-time {
+    margin-left: 8px;
 }
 
 .list-movieInformation .list-information div {
@@ -241,7 +270,7 @@
 .container-company .list-companyInformation dt,
 .container-company .list-companyInformation dd {
     display: inline-block;
-     float: left;
+    float: left;
 }
 
 .container-company .list-companyInformation dt {

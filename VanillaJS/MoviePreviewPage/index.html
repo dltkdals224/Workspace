@@ -12,8 +12,8 @@
 
 <body>
     <div class="nav-skip">
-        <a href="#cont-nav">영화목록 바로가기</a>
-        <a href="#cont-company">회사정보 바로가기</a>
+        <a href="#cont-nav">To movie_list</a>
+        <a href="#cont-company">To company_info</a>
     </div>
     <h1 class="sr-only">My Cinema</h1>
     <section class="container-movie">
@@ -25,266 +25,701 @@
                 <!--ul-li는 보통 ul에만 class넣고 접근하는 편-->
                 <ul class="list-movie">
                     <!--#none은 페이지 새로고침을 막는다-->
-                    <li class="on"><a href="#none">Showing Movies</a></li>
-                    <li><a href="#none">Upcoming Movies</a></li>
-                    <li><a href="#none">Boxoffice</a></li>
+                    <li><a id="showingBtn" class="clickOn">Showing Movies</a></li>
+                    <li><a id="upcomingBtn" class="clickOff">Upcoming Movies</a></li>
+                    <li><a id="boxofficeBtn" class="clickOff">Boxoffice</a></li>
                 </ul>
             </nav>
         </header>
         <section>
             <h3 class="sr-only">currently showing movies</h3>
             <ul class="list-movieInformation">
-                <li id="movie1">
-                    <!--article도 sectioning요소-->
-                    <article>
-                        <h4 class="sr-only">Movie Information</h4>
-                        <a href="https://search.naver.com/search.naver?where=nexearch&sm=tab_etc&pkid=68&os=13881020&qvt=0&query=%EB%AA%A8%EA%B0%80%EB%94%94%EC%8A%88"
-                            class="link-movie">
-                            <img src="src/img/1.jpg" alt="모가디슈">
-                        </a>
-                        <strong class="title-movie sl-ellipsis">모가디슈</strong>
-                        <!--ul,ol,dl중 dl은 유일하게 자식요소로 div 가능-->
-                        <dl class="list-information">
-                            <div>
-                                <dt>개요</dt>
-                                <dd>액션</dd>
-                            </div>
-                            <div class="item-star">
-                                <dt>평점</dt>
-                                <dd>8.82</dd>
-                            </div>
-                            <div>
-                                <dt>개봉</dt>
-                                <dd>2021.07.28</dd>
-                            </div>
-                            <div>
-                                <dt>출연</dt>
-                                <dd class="multi-ellipsis">김윤석,조인성,허준호,구교환,김소진,정만식</dd>
-                            </div>
-                        </dl>
-                    </article>
-                    <a href="https://search.naver.com/search.naver?where=nexearch&sm=tab_etc&mra=bkEw&pkid=68&os=13881020&qvt=0&query=%EC%98%81%ED%99%94%20%EB%AA%A8%EA%B0%80%EB%94%94%EC%8A%88%20%EC%83%81%EC%98%81%EC%9D%BC%EC%A0%95" class="link-reserve">Reserve</a>
-                    <a href="https://tv.naver.com/v/21200264" class="link-teaser">Teaser</a>
-                </li>
-                <li id="movie2">
-                    <article>
-                        <h4 class="sr-only">Movie Information</h4>
-                        <a href="https://search.naver.com/search.naver?where=nexearch&sm=tab_etc&pkid=68&os=11410674&qvt=0&query=%EB%B3%B4%EC%8A%A4%20%EB%B2%A0%EC%9D%B4%EB%B9%84%202"
-                            class="link-movie">
-                            <img src="src/img/2.jpg" alt="보스 베이비2">
-                        </a>
-                        <strong class="title-movie sl-ellipsis">보스 베이비2</strong>
-                        <!--ul,ol,dl중 dl은 유일하게 자식요소로 div 가능-->
-                        <dl class="list-information">
-                            <div>
-                                <dt>개요</dt>
-                                <dd>애니메이션</dd>
-                            </div>
-                            <div class="item-star">
-                                <dt>평점</dt>
-                                <dd>9.57</dd>
-                            </div>
-                            <div>
-                                <dt>개봉</dt>
-                                <dd>2021.07.21</dd>
-                            </div>
-                            <div>
-                                <dt>출연</dt>
-                                <dd class="multi-ellipsis">알렉 볼드윈,제임스 마스던,에이미 세다리스,에바 롱고리아,제프 골드브럼,지미 키멜,리사 쿠드로,아리나
-                                    그린블랫,제임스 맥그레이스</dd>
-                            </div>
-                        </dl>
-                    </article>
-                    <a href="https://search.naver.com/search.naver?where=nexearch&sm=tab_etc&mra=bkEw&pkid=68&os=11410674&qvt=0&query=%EB%B3%B4%EC%8A%A4%20%EB%B2%A0%EC%9D%B4%EB%B9%84%202%20%EC%83%81%EC%98%81%EC%9D%BC%EC%A0%95" class="link-reserve">Reserve</a>
-                    <a href="https://tv.naver.com/v/21180035" class="link-teaser">Teaser</a>
-                </li>
-                <li id="movie3">
-                    <article>
-                        <h4 class="sr-only">Movie Information</h4>
-                        <a href="https://search.naver.com/search.naver?where=nexearch&sm=tab_etc&pkid=68&os=6300918&qvt=0&query=%EB%8D%94%20%EC%88%98%EC%96%B4%EC%82%AC%EC%9D%B4%EB%93%9C%20%EC%8A%A4%EC%BF%BC%EB%93%9C"
-                            class="link-movie">
-                            <img src="src/img/3.jpg" alt="더 수어사이드 스쿼드">
-                        </a>
-                        <strong class="title-movie sl-ellipsis">더 수어사이드 스쿼드</strong>
-                        <!--ul,ol,dl중 dl은 유일하게 자식요소로 div 가능-->
-                        <dl class="list-information">
-                            <div>
-                                <dt>개요</dt>
-                                <dd>액션</dd>
-                            </div>
-                            <div class="item-star">
-                                <dt>평점</dt>
-                                <dd>8.57</dd>
-                            </div>
-                            <div>
-                                <dt>개봉</dt>
-                                <dd>2021.08.04</dd>
-                            </div>
-                            <div>
-                                <dt>출연</dt>
-                                <dd class="multi-ellipsis">마고 로비,이드리스 엘바,존 시나,조엘 킨나만,실베스터 스탤론,비올라 데이비스,~</dd>
-                            </div>
-                        </dl>
-                    </article>
-                    <a href="https://search.naver.com/search.naver?where=nexearch&sm=tab_etc&mra=bkEw&pkid=68&os=6300918&qvt=0&query=%EB%8D%94%20%EC%88%98%EC%96%B4%EC%82%AC%EC%9D%B4%EB%93%9C%20%EC%8A%A4%EC%BF%BC%EB%93%9C%20%EC%83%81%EC%98%81%EC%9D%BC%EC%A0%95" class="link-reserve">Reserve</a>
-                    <a href="https://tv.naver.com/v/21268189" class="link-teaser">Teaser</a>
-                </li>
-                <li id="movie4">
-                    <article>
-                        <h4 class="sr-only">Movie Information</h4>
-                        <a href="https://search.naver.com/search.naver?where=nexearch&sm=tab_etc&pkid=68&os=9704651&qvt=0&query=%EB%B8%94%EB%9E%99%20%EC%9C%84%EB%8F%84%EC%9A%B0"
-                            class="link-movie">
-                            <img src="src/img/4.jpg" alt="블랙 위도우">
-                        </a>
-                        <strong class="title-movie sl-ellipsis">블랙 위도우</strong>
-                        <!--ul,ol,dl중 dl은 유일하게 자식요소로 div 가능-->
-                        <dl class="list-information">
-                            <div>
-                                <dt>개요</dt>
-                                <dd>액션</dd>
-                            </div>
-                            <div class="item-star">
-                                <dt>평점</dt>
-                                <dd>9.07</dd>
-                            </div>
-                            <div>
-                                <dt>개봉</dt>
-                                <dd>2021.07.07</dd>
-                            </div>
-                            <div>
-                                <dt>출연</dt>
-                                <dd class="multi-ellipsis">스칼릿 조핸슨,플로렌스 퓨,레이첼 와이즈,데이빗 하버,레이 윈스턴,윌리엄 서트,~</dd>
-                            </div>
-                        </dl>
-                    </article>
-                    <a href="https://search.naver.com/search.naver?where=nexearch&sm=tab_etc&mra=bkEw&pkid=68&os=9704651&qvt=0&query=%EC%98%81%ED%99%94%20%EB%B8%94%EB%9E%99%20%EC%9C%84%EB%8F%84%EC%9A%B0%20%EC%83%81%EC%98%81%EC%9D%BC%EC%A0%95" class="link-reserve">Reserve</a>
-                    <a href="https://tv.naver.com/v/12833564" class="link-teaser">Teaser</a>
-                </li>
-                <li id="movie5">
-                    <article>
-                        <h4 class="sr-only">Movie Information</h4>
-                        <a href="https://search.naver.com/search.naver?where=nexearch&sm=tab_etc&pkid=68&os=8760188&qvt=0&query=%EC%A0%95%EA%B8%80%20%ED%81%AC%EB%A3%A8%EC%A6%88"
-                            class="link-movie">
-                            <img src="src/img/5.jpg" alt="정글 크루즈">
-                        </a>
-                        <strong class="title-movie sl-ellipsis">정글 크루즈</strong>
-                        <!--ul,ol,dl중 dl은 유일하게 자식요소로 div 가능-->
-                        <dl class="list-information">
-                            <div>
-                                <dt>개요</dt>
-                                <dd>액션</dd>
-                            </div>
-                            <div class="item-star">
-                                <dt>평점</dt>
-                                <dd>7.95</dd>
-                            </div>
-                            <div>
-                                <dt>개봉</dt>
-                                <dd>2021.07.28</dd>
-                            </div>
-                            <div>
-                                <dt>출연</dt>
-                                <dd class="multi-ellipsis">드웨인 존슨,에밀리 블런트,에드가 라미레즈,제시 플레먼스,폴 지아마티,잭화이트홀,~</dd>
-                            </div>
-                        </dl>
-                    </article>
-                    <a href="https://search.naver.com/search.naver?where=nexearch&sm=tab_etc&mra=bkEw&pkid=68&os=8760188&qvt=0&query=%EC%A0%95%EA%B8%80%20%ED%81%AC%EB%A3%A8%EC%A6%88%20%EC%83%81%EC%98%81%EC%9D%BC%EC%A0%95" class="link-reserve">Reserve</a>
-                    <a href="https://tv.naver.com/v/20939682" class="link-teaser">Teaser</a>
-                </li>
-                <li id="movie6">
-                    <article>
-                        <h4 class="sr-only">Movie Information</h4>
-                        <a href="https://search.naver.com/search.naver?where=nexearch&sm=tab_etc&pkid=68&os=14399912&qvt=0&query=%EA%B7%B9%EC%9E%A5%ED%8C%90%20%EB%8F%84%EB%9D%BC%EC%97%90%EB%AA%BD%3A%20%EC%A7%84%EA%B5%AC%EC%9D%98%20%EC%8B%A0%EA%B3%B5%EB%A3%A1"
-                            class="link-movie">
-                            <img src="src/img/6.jpg" alt="극장판 도라에몽:진구의 신공룡">
-                        </a>
-                        <strong class="title-movie sl-ellipsis">극장판 도라에몽:진구의 신공룡</strong>
-                        <!--ul,ol,dl중 dl은 유일하게 자식요소로 div 가능-->
-                        <dl class="list-information">
-                            <div>
-                                <dt>개요</dt>
-                                <dd>애니메이션</dd>
-                            </div>
-                            <div class="item-star">
-                                <dt>평점</dt>
-                                <dd>9.53</dd>
-                            </div>
-                            <div>
-                                <dt>개봉</dt>
-                                <dd>2021.08.05</dd>
-                            </div>
-                            <div>
-                                <dt>출연</dt>
-                                <dd class="multi-ellipsis">윤아영,김정아,최낙윤,이현주,조현정,미즈타 와사비,오오하라 메구미,키무라 스바루,세키 토모카즈,카카즈
-                                    유미</dd>
-                            </div>
-                        </dl>
-                    </article>
-                    <a href="https://search.naver.com/search.naver?where=nexearch&sm=tab_etc&mra=bkEw&pkid=68&os=14399912&qvt=0&query=%EA%B7%B9%EC%9E%A5%ED%8C%90%20%EB%8F%84%EB%9D%BC%EC%97%90%EB%AA%BD%3A%20%EC%A7%84%EA%B5%AC%EC%9D%98%20%EC%8B%A0%EA%B3%B5%EB%A3%A1%20%EC%83%81%EC%98%81%EC%9D%BC%EC%A0%95" class="link-reserve">Reserve</a>
-                    <a href="https://tv.naver.com/v/21531841" class="link-teaser">Teaser</a>
-                </li>
-                <li id="movie7">
-                    <article>
-                        <h4 class="sr-only">Movie Information</h4>
-                        <a href="https://search.naver.com/search.naver?where=nexearch&sm=tab_etc&pkid=68&os=17168942&qvt=0&query=%EB%B0%A9%EB%B2%95%3A%20%EC%9E%AC%EC%B0%A8%EC%9D%98"
-                            class="link-movie">
-                            <img src="src/img/7.jpg" alt="방법: 재차의">
-                        </a>
-                        <strong class="title-movie sl-ellipsis">방법: 재차의</strong>
-                        <!--ul,ol,dl중 dl은 유일하게 자식요소로 div 가능-->
-                        <dl class="list-information">
-                            <div>
-                                <dt>개요</dt>
-                                <dd>미스터리</dd>
-                            </div>
-                            <div class="item-star">
-                                <dt>평점</dt>
-                                <dd>8.23</dd>
-                            </div>
-                            <div>
-                                <dt>개봉</dt>
-                                <dd>2021.07.28</dd>
-                            </div>
-                            <div>
-                                <dt>출연</dt>
-                                <dd class="multi-ellipsis">엄지원,정지소,정문성,김인권,고규필,권해효</dd>
-                            </div>
-                        </dl>
-                    </article>
-                    <a href="https://search.naver.com/search.naver?where=nexearch&sm=tab_etc&mra=bkEw&pkid=68&os=17168942&qvt=0&query=%EB%B0%A9%EB%B2%95%3A%20%EC%9E%AC%EC%B0%A8%EC%9D%98%20%EC%83%81%EC%98%81%EC%9D%BC%EC%A0%95" class="link-reserve">Reserve</a>
-                    <a href="https://tv.naver.com/v/21264974" class="link-teaser">Teaser</a>
-                </li>
-                <li id="movie8">
-                    <article>
-                        <h4 class="sr-only">Movie Information</h4>
-                        <a href="https://search.naver.com/search.naver?where=nexearch&sm=tab_etc&pkid=68&os=18669286&qvt=0&query=%EA%B7%B8%EB%A6%B0%20%EB%82%98%EC%9D%B4%ED%8A%B8"
-                            class="link-movie">
-                            <img src="src/img/8.jpg" alt="그린 나이트">
-                        </a>
-                        <strong class="title-movie sl-ellipsis">그린 나이트</strong>
-                        <!--ul,ol,dl중 dl은 유일하게 자식요소로 div 가능-->
-                        <dl class="list-information">
-                            <div>
-                                <dt>개요</dt>
-                                <dd>모험</dd>
-                            </div>
-                            <div class="item-star">
-                                <dt>평점</dt>
-                                <dd>7.42</dd>
-                            </div>
-                            <div>
-                                <dt>개봉</dt>
-                                <dd>2021.08.05</dd>
-                            </div>
-                            <div>
-                                <dt>출연</dt>
-                                <dd class="multi-ellipsis">데브 파텔,알리시아 비칸데르,조엘 에저튼,사리타 초우드리,랄프 이네슨,케이트 딕키,배리 케오간,숀 헤리스</dd>
-                            </div>
-                        </dl>
-                    </article>
-                    <a href="https://search.naver.com/search.naver?where=nexearch&sm=tab_etc&mra=bkEw&pkid=68&os=18669286&qvt=0&query=%EA%B7%B8%EB%A6%B0%20%EB%82%98%EC%9D%B4%ED%8A%B8%20%EC%83%81%EC%98%81%EC%9D%BC%EC%A0%95" class="link-reserve">Reserve</a>
-                    <a href="https://tv.naver.com/v/21425908" class="link-teaser">Teaser</a>
-                </li>
+                <div id="showing_movie">
+                    <li>
+                        <!--article도 sectioning요소-->
+                        <article>
+                            <h4 class="sr-only">Movie Information</h4>
+                            <a href="https://search.naver.com/search.naver?where=nexearch&sm=tab_etc&pkid=68&os=13881020&qvt=0&query=%EB%AA%A8%EA%B0%80%EB%94%94%EC%8A%88"
+                                class="link-movie">
+                                <img src="src/img/1.jpg" alt="모가디슈">
+                            </a>
+                            <strong class="title-movie sl-ellipsis">모가디슈</strong>
+                            <!--ul,ol,dl중 dl은 유일하게 자식요소로 div 가능-->
+                            <dl class="list-information">
+                                <div>
+                                    <dt>개요</dt>
+                                    <dd>액션</dd>
+                                </div>
+                                <div class="item-star">
+                                    <dt>평점</dt>
+                                    <dd>8.82</dd>
+                                </div>
+                                <div>
+                                    <dt>개봉</dt>
+                                    <dd>2021.07.28</dd>
+                                </div>
+                                <div>
+                                    <dt>출연</dt>
+                                    <dd class="multi-ellipsis">김윤석,조인성,허준호,구교환,김소진,정만식</dd>
+                                </div>
+                            </dl>
+                        </article>
+                        <a href="https://search.naver.com/search.naver?where=nexearch&sm=tab_etc&mra=bkEw&pkid=68&os=13881020&qvt=0&query=%EC%98%81%ED%99%94%20%EB%AA%A8%EA%B0%80%EB%94%94%EC%8A%88%20%EC%83%81%EC%98%81%EC%9D%BC%EC%A0%95"
+                            class="link-reserve">Reserve</a>
+                        <a href="https://tv.naver.com/v/21200264" class="link-teaser">Teaser</a>
+                    </li>
+                    <li>
+                        <article>
+                            <h4 class="sr-only">Movie Information</h4>
+                            <a href="https://search.naver.com/search.naver?where=nexearch&sm=tab_etc&pkid=68&os=11410674&qvt=0&query=%EB%B3%B4%EC%8A%A4%20%EB%B2%A0%EC%9D%B4%EB%B9%84%202"
+                                class="link-movie">
+                                <img src="src/img/2.jpg" alt="보스 베이비2">
+                            </a>
+                            <strong class="title-movie sl-ellipsis">보스 베이비2</strong>
+                            <!--ul,ol,dl중 dl은 유일하게 자식요소로 div 가능-->
+                            <dl class="list-information">
+                                <div>
+                                    <dt>개요</dt>
+                                    <dd>애니메이션</dd>
+                                </div>
+                                <div class="item-star">
+                                    <dt>평점</dt>
+                                    <dd>9.57</dd>
+                                </div>
+                                <div>
+                                    <dt>개봉</dt>
+                                    <dd>2021.07.21</dd>
+                                </div>
+                                <div>
+                                    <dt>출연</dt>
+                                    <dd class="multi-ellipsis">알렉 볼드윈,제임스 마스던,에이미 세다리스,에바 롱고리아,제프 골드브럼,지미 키멜,리사 쿠드로,아리나
+                                        그린블랫,제임스 맥그레이스</dd>
+                                </div>
+                            </dl>
+                        </article>
+                        <a href="https://search.naver.com/search.naver?where=nexearch&sm=tab_etc&mra=bkEw&pkid=68&os=11410674&qvt=0&query=%EB%B3%B4%EC%8A%A4%20%EB%B2%A0%EC%9D%B4%EB%B9%84%202%20%EC%83%81%EC%98%81%EC%9D%BC%EC%A0%95"
+                            class="link-reserve">Reserve</a>
+                        <a href="https://tv.naver.com/v/21180035" class="link-teaser">Teaser</a>
+                    </li>
+                    <li>
+                        <article>
+                            <h4 class="sr-only">Movie Information</h4>
+                            <a href="https://search.naver.com/search.naver?where=nexearch&sm=tab_etc&pkid=68&os=6300918&qvt=0&query=%EB%8D%94%20%EC%88%98%EC%96%B4%EC%82%AC%EC%9D%B4%EB%93%9C%20%EC%8A%A4%EC%BF%BC%EB%93%9C"
+                                class="link-movie">
+                                <img src="src/img/3.jpg" alt="더 수어사이드 스쿼드">
+                            </a>
+                            <strong class="title-movie sl-ellipsis">더 수어사이드 스쿼드</strong>
+                            <!--ul,ol,dl중 dl은 유일하게 자식요소로 div 가능-->
+                            <dl class="list-information">
+                                <div>
+                                    <dt>개요</dt>
+                                    <dd>액션</dd>
+                                </div>
+                                <div class="item-star">
+                                    <dt>평점</dt>
+                                    <dd>8.57</dd>
+                                </div>
+                                <div>
+                                    <dt>개봉</dt>
+                                    <dd>2021.08.04</dd>
+                                </div>
+                                <div>
+                                    <dt>출연</dt>
+                                    <dd class="multi-ellipsis">마고 로비,이드리스 엘바,존 시나,조엘 킨나만,실베스터 스탤론,비올라 데이비스,~</dd>
+                                </div>
+                            </dl>
+                        </article>
+                        <a href="https://search.naver.com/search.naver?where=nexearch&sm=tab_etc&mra=bkEw&pkid=68&os=6300918&qvt=0&query=%EB%8D%94%20%EC%88%98%EC%96%B4%EC%82%AC%EC%9D%B4%EB%93%9C%20%EC%8A%A4%EC%BF%BC%EB%93%9C%20%EC%83%81%EC%98%81%EC%9D%BC%EC%A0%95"
+                            class="link-reserve">Reserve</a>
+                        <a href="https://tv.naver.com/v/21268189" class="link-teaser">Teaser</a>
+                    </li>
+                    <li>
+                        <article>
+                            <h4 class="sr-only">Movie Information</h4>
+                            <a href="https://search.naver.com/search.naver?where=nexearch&sm=tab_etc&pkid=68&os=9704651&qvt=0&query=%EB%B8%94%EB%9E%99%20%EC%9C%84%EB%8F%84%EC%9A%B0"
+                                class="link-movie">
+                                <img src="src/img/4.jpg" alt="블랙 위도우">
+                            </a>
+                            <strong class="title-movie sl-ellipsis">블랙 위도우</strong>
+                            <!--ul,ol,dl중 dl은 유일하게 자식요소로 div 가능-->
+                            <dl class="list-information">
+                                <div>
+                                    <dt>개요</dt>
+                                    <dd>액션</dd>
+                                </div>
+                                <div class="item-star">
+                                    <dt>평점</dt>
+                                    <dd>9.07</dd>
+                                </div>
+                                <div>
+                                    <dt>개봉</dt>
+                                    <dd>2021.07.07</dd>
+                                </div>
+                                <div>
+                                    <dt>출연</dt>
+                                    <dd class="multi-ellipsis">스칼릿 조핸슨,플로렌스 퓨,레이첼 와이즈,데이빗 하버,레이 윈스턴,윌리엄 서트,~</dd>
+                                </div>
+                            </dl>
+                        </article>
+                        <a href="https://search.naver.com/search.naver?where=nexearch&sm=tab_etc&mra=bkEw&pkid=68&os=9704651&qvt=0&query=%EC%98%81%ED%99%94%20%EB%B8%94%EB%9E%99%20%EC%9C%84%EB%8F%84%EC%9A%B0%20%EC%83%81%EC%98%81%EC%9D%BC%EC%A0%95"
+                            class="link-reserve">Reserve</a>
+                        <a href="https://tv.naver.com/v/12833564" class="link-teaser">Teaser</a>
+                    </li>
+                    <li>
+                        <article>
+                            <h4 class="sr-only">Movie Information</h4>
+                            <a href="https://search.naver.com/search.naver?where=nexearch&sm=tab_etc&pkid=68&os=8760188&qvt=0&query=%EC%A0%95%EA%B8%80%20%ED%81%AC%EB%A3%A8%EC%A6%88"
+                                class="link-movie">
+                                <img src="src/img/5.jpg" alt="정글 크루즈">
+                            </a>
+                            <strong class="title-movie sl-ellipsis">정글 크루즈</strong>
+                            <!--ul,ol,dl중 dl은 유일하게 자식요소로 div 가능-->
+                            <dl class="list-information">
+                                <div>
+                                    <dt>개요</dt>
+                                    <dd>액션</dd>
+                                </div>
+                                <div class="item-star">
+                                    <dt>평점</dt>
+                                    <dd>7.95</dd>
+                                </div>
+                                <div>
+                                    <dt>개봉</dt>
+                                    <dd>2021.07.28</dd>
+                                </div>
+                                <div>
+                                    <dt>출연</dt>
+                                    <dd class="multi-ellipsis">드웨인 존슨,에밀리 블런트,에드가 라미레즈,제시 플레먼스,폴 지아마티,잭화이트홀,~</dd>
+                                </div>
+                            </dl>
+                        </article>
+                        <a href="https://search.naver.com/search.naver?where=nexearch&sm=tab_etc&mra=bkEw&pkid=68&os=8760188&qvt=0&query=%EC%A0%95%EA%B8%80%20%ED%81%AC%EB%A3%A8%EC%A6%88%20%EC%83%81%EC%98%81%EC%9D%BC%EC%A0%95"
+                            class="link-reserve">Reserve</a>
+                        <a href="https://tv.naver.com/v/20939682" class="link-teaser">Teaser</a>
+                    </li>
+                    <li>
+                        <article>
+                            <h4 class="sr-only">Movie Information</h4>
+                            <a href="https://search.naver.com/search.naver?where=nexearch&sm=tab_etc&pkid=68&os=14399912&qvt=0&query=%EA%B7%B9%EC%9E%A5%ED%8C%90%20%EB%8F%84%EB%9D%BC%EC%97%90%EB%AA%BD%3A%20%EC%A7%84%EA%B5%AC%EC%9D%98%20%EC%8B%A0%EA%B3%B5%EB%A3%A1"
+                                class="link-movie">
+                                <img src="src/img/6.jpg" alt="극장판 도라에몽:진구의 신공룡">
+                            </a>
+                            <strong class="title-movie sl-ellipsis">극장판 도라에몽:진구의 신공룡</strong>
+                            <!--ul,ol,dl중 dl은 유일하게 자식요소로 div 가능-->
+                            <dl class="list-information">
+                                <div>
+                                    <dt>개요</dt>
+                                    <dd>애니메이션</dd>
+                                </div>
+                                <div class="item-star">
+                                    <dt>평점</dt>
+                                    <dd>9.53</dd>
+                                </div>
+                                <div>
+                                    <dt>개봉</dt>
+                                    <dd>2021.08.05</dd>
+                                </div>
+                                <div>
+                                    <dt>출연</dt>
+                                    <dd class="multi-ellipsis">윤아영,김정아,최낙윤,이현주,조현정,미즈타 와사비,오오하라 메구미,키무라 스바루,세키 토모카즈,카카즈
+                                        유미</dd>
+                                </div>
+                            </dl>
+                        </article>
+                        <a href="https://search.naver.com/search.naver?where=nexearch&sm=tab_etc&mra=bkEw&pkid=68&os=14399912&qvt=0&query=%EA%B7%B9%EC%9E%A5%ED%8C%90%20%EB%8F%84%EB%9D%BC%EC%97%90%EB%AA%BD%3A%20%EC%A7%84%EA%B5%AC%EC%9D%98%20%EC%8B%A0%EA%B3%B5%EB%A3%A1%20%EC%83%81%EC%98%81%EC%9D%BC%EC%A0%95"
+                            class="link-reserve">Reserve</a>
+                        <a href="https://tv.naver.com/v/21531841" class="link-teaser">Teaser</a>
+                    </li>
+                    <li>
+                        <article>
+                            <h4 class="sr-only">Movie Information</h4>
+                            <a href="https://search.naver.com/search.naver?where=nexearch&sm=tab_etc&pkid=68&os=17168942&qvt=0&query=%EB%B0%A9%EB%B2%95%3A%20%EC%9E%AC%EC%B0%A8%EC%9D%98"
+                                class="link-movie">
+                                <img src="src/img/7.jpg" alt="방법: 재차의">
+                            </a>
+                            <strong class="title-movie sl-ellipsis">방법: 재차의</strong>
+                            <!--ul,ol,dl중 dl은 유일하게 자식요소로 div 가능-->
+                            <dl class="list-information">
+                                <div>
+                                    <dt>개요</dt>
+                                    <dd>미스터리</dd>
+                                </div>
+                                <div class="item-star">
+                                    <dt>평점</dt>
+                                    <dd>8.23</dd>
+                                </div>
+                                <div>
+                                    <dt>개봉</dt>
+                                    <dd>2021.07.28</dd>
+                                </div>
+                                <div>
+                                    <dt>출연</dt>
+                                    <dd class="multi-ellipsis">엄지원,정지소,정문성,김인권,고규필,권해효</dd>
+                                </div>
+                            </dl>
+                        </article>
+                        <a href="https://search.naver.com/search.naver?where=nexearch&sm=tab_etc&mra=bkEw&pkid=68&os=17168942&qvt=0&query=%EB%B0%A9%EB%B2%95%3A%20%EC%9E%AC%EC%B0%A8%EC%9D%98%20%EC%83%81%EC%98%81%EC%9D%BC%EC%A0%95"
+                            class="link-reserve">Reserve</a>
+                        <a href="https://tv.naver.com/v/21264974" class="link-teaser">Teaser</a>
+                    </li>
+                    <li>
+                        <article>
+                            <h4 class="sr-only">Movie Information</h4>
+                            <a href="https://search.naver.com/search.naver?where=nexearch&sm=tab_etc&pkid=68&os=18669286&qvt=0&query=%EA%B7%B8%EB%A6%B0%20%EB%82%98%EC%9D%B4%ED%8A%B8"
+                                class="link-movie">
+                                <img src="src/img/8.jpg" alt="그린 나이트">
+                            </a>
+                            <strong class="title-movie sl-ellipsis">그린 나이트</strong>
+                            <!--ul,ol,dl중 dl은 유일하게 자식요소로 div 가능-->
+                            <dl class="list-information">
+                                <div>
+                                    <dt>개요</dt>
+                                    <dd>모험</dd>
+                                </div>
+                                <div class="item-star">
+                                    <dt>평점</dt>
+                                    <dd>7.42</dd>
+                                </div>
+                                <div>
+                                    <dt>개봉</dt>
+                                    <dd>2021.08.05</dd>
+                                </div>
+                                <div>
+                                    <dt>출연</dt>
+                                    <dd class="multi-ellipsis">데브 파텔,알리시아 비칸데르,조엘 에저튼,사리타 초우드리,랄프 이네슨,케이트 딕키,배리 케오간,숀
+                                        헤리스</dd>
+                                </div>
+                            </dl>
+                        </article>
+                        <a href="https://search.naver.com/search.naver?where=nexearch&sm=tab_etc&mra=bkEw&pkid=68&os=18669286&qvt=0&query=%EA%B7%B8%EB%A6%B0%20%EB%82%98%EC%9D%B4%ED%8A%B8%20%EC%83%81%EC%98%81%EC%9D%BC%EC%A0%95"
+                            class="link-reserve">Reserve</a>
+                        <a href="https://tv.naver.com/v/21425908" class="link-teaser">Teaser</a>
+                    </li>
+                </div>
+
+                <!-- upcoming movies -->
+                <div id="upcoming_movie" class="hidden">
+                    <li>
+                        <article>
+                            <h4 class="sr-only">Movie Information</h4>
+                            <a href="https://search.naver.com/search.naver?where=nexearch&sm=tab_etc&pkid=68&os=10044111&qvt=0&query=%EC%8B%B1%ED%81%AC%ED%99%80" class="link-movie">
+                                <img src="src/img/9.jpg" alt="싱크홀">
+                            </a>
+                            <strong class="title-movie sl-ellipsis">싱크홀</strong>
+                            <!--ul,ol,dl중 dl은 유일하게 자식요소로 div 가능-->
+                            <dl class="list-information">
+                                <div>
+                                    <dt>개요</dt>
+                                    <dd>드라마</dd>
+                                </div>
+                                <div>
+                                    <dt class="item-time">시간</dt>
+                                    <dd>113분</dd>
+                                </div>
+                                <div>
+                                    <dt>개봉</dt>
+                                    <dd>2021.08.11</dd>
+                                </div>
+                                <div>
+                                    <dt>출연</dt>
+                                    <dd class="multi-ellipsis">차승원, 김성균, 이광수, 김혜준, 남다름, 김홍파</dd>
+                                </div>
+                            </dl>
+                        </article>
+                        <a href="https://search.naver.com/search.naver?where=nexearch&sm=tab_etc&mra=bkEw&pkid=68&os=10044111&qvt=0&query=%EC%8B%B1%ED%81%AC%ED%99%80%20%EC%83%81%EC%98%81%EC%9D%BC%EC%A0%95" class="link-reserve">Reserve</a>
+                        <a href="https://movie.naver.com/movie/bi/mi/mediaView.naver?code=188472&mid=49947" class="link-teaser">Teaser</a>
+                    </li>
+                    <li>
+                        <article>
+                            <h4 class="sr-only">Movie Information</h4>
+                            <a href="https://search.naver.com/search.naver?where=nexearch&sm=tab_etc&pkid=68&os=11202563&qvt=0&query=%ED%94%84%EB%A6%AC%20%EA%B0%80%EC%9D%B4" class="link-movie">
+                                <img src="src/img/10.jpg" alt="프리 가이">
+                            </a>
+                            <strong class="title-movie sl-ellipsis">프리 가이</strong>
+                            <!--ul,ol,dl중 dl은 유일하게 자식요소로 div 가능-->
+                            <dl class="list-information">
+                                <div>
+                                    <dt>개요</dt>
+                                    <dd>액션</dd>
+                                </div>
+                                <div class="item-time">
+                                    <dt>시간</dt>
+                                    <dd>115분</dd>
+                                </div>
+                                <div>
+                                    <dt>개봉</dt>
+                                    <dd>2021.08.11</dd>
+                                </div>
+                                <div>
+                                    <dt>출연</dt>
+                                    <dd class="multi-ellipsis">
+                                        라이언 레이놀즈, 조디 코머, 타이카 와이티티, 조 키어리, 릴렐 호워리, 우카쉬 엠부드카, ~</dd>
+                                </div>
+                            </dl>
+                        </article>
+                        <a href="https://search.naver.com/search.naver?where=nexearch&sm=tab_etc&mra=bkEw&pkid=68&os=11202563&qvt=0&query=%ED%94%84%EB%A6%AC%20%EA%B0%80%EC%9D%B4%20%EC%83%81%EC%98%81%EC%9D%BC%EC%A0%95" class="link-reserve">Reserve</a>
+                        <a href="https://movie.naver.com/movie/bi/mi/mediaView.naver?code=190324&mid=47459" class="link-teaser">Teaser</a>
+                    </li>
+                    <li>
+                        <article>
+                            <h4 class="sr-only">Movie Information</h4>
+                            <a href="https://search.naver.com/search.naver?where=nexearch&sm=tab_etc&pkid=68&os=11347162&qvt=0&query=%ED%95%98%EC%9D%B4%ED%81%90!!%20%EB%95%85%20VS%20%ED%95%98%EB%8A%98" class="link-movie">
+                                <img src="src/img/11.jpg" alt="하이큐!! 땅 VS 하늘">
+                            </a>
+                            <strong class="title-movie sl-ellipsis">하이큐!! 땅 VS 하늘</strong>
+                            <!--ul,ol,dl중 dl은 유일하게 자식요소로 div 가능-->
+                            <dl class="list-information">
+                                <div>
+                                    <dt>개요</dt>
+                                    <dd>애니메이션</dd>
+                                </div>
+                                <div class="item-time">
+                                    <dt>시간</dt>
+                                    <dd>46분</dd>
+                                </div>
+                                <div>
+                                    <dt>재개봉</dt>
+                                    <dd>2021.08.12</dd>
+                                </div>
+                                <div>
+                                    <dt>출연</dt>
+                                    <dd class="multi-ellipsis">
+                                        구자형, 김영선, 양정화, 최승훈, 남도형, 나카무라 유이치, 카지 유우키</dd>
+                                </div>
+                            </dl>
+                        </article>
+                        <a href="https://search.naver.com/search.naver?where=nexearch&sm=tab_etc&mra=bkEw&pkid=68&os=11347162&qvt=0&query=%ED%95%98%EC%9D%B4%ED%81%90!!%20%EB%95%85%20VS%20%ED%95%98%EB%8A%98%20%EC%83%81%EC%98%81%EC%9D%BC%EC%A0%95" class="link-reserve">Reserve</a>
+                        <a href="https://movie.naver.com/movie/bi/mi/mediaView.naver?code=191431&mid=50006" class="link-teaser">Teaser</a>
+                    </li>
+                    <li>
+                        <article>
+                            <h4 class="sr-only">Movie Information</h4>
+                            <a href="https://search.naver.com/search.naver?where=nexearch&sm=tab_etc&pkid=68&os=14264128&qvt=0&query=%EC%83%9D%EA%B0%81%EC%9D%98%20%EC%97%AC%EB%A6%84" class="link-movie">
+                                <img src="src/img/12.jpg" alt="생각의 여름">
+                            </a>
+                            <strong class="title-movie sl-ellipsis">생각의 여름</strong>
+                            <!--ul,ol,dl중 dl은 유일하게 자식요소로 div 가능-->
+                            <dl class="list-information">
+                                <div>
+                                    <dt>개요</dt>
+                                    <dd>드라마</dd>
+                                </div>
+                                <div class="item-time">
+                                    <dt>시간</dt>
+                                    <dd>82분</dd>
+                                </div>
+                                <div>
+                                    <dt>개봉</dt>
+                                    <dd>2021.08.12</dd>
+                                </div>
+                                <div>
+                                    <dt>출연</dt>
+                                    <dd class="multi-ellipsis">
+                                        김예은, 곽민규, 오규철, 한해인, 신기환</dd>
+                                </div>
+                            </dl>
+                        </article>
+                        <a href="https://search.naver.com/search.naver?where=nexearch&sm=tab_etc&mra=bkEw&pkid=68&os=14264128&qvt=0&query=%EC%83%9D%EA%B0%81%EC%9D%98%20%EC%97%AC%EB%A6%84%20%EC%83%81%EC%98%81%EC%9D%BC%EC%A0%95" class="link-reserve">Reserve</a>
+                        <a href="https://movie.naver.com/movie/bi/mi/mediaView.naver?code=194082&mid=49968" class="link-teaser">Teaser</a>
+                    </li>
+                    <li>
+                        <article>
+                            <h4 class="sr-only">Movie Information</h4>
+                            <a href="https://search.naver.com/search.naver?where=nexearch&sm=tab_etc&pkid=68&os=11842001&qvt=0&query=%EC%95%94%EC%82%B4%EC%9E%90%EB%93%A4" class="link-movie">
+                                <img src="src/img/13.jpg" alt="암살자들">
+                            </a>
+                            <strong class="title-movie sl-ellipsis">암살자들</strong>
+                            <!--ul,ol,dl중 dl은 유일하게 자식요소로 div 가능-->
+                            <dl class="list-information">
+                                <div>
+                                    <dt>개요</dt>
+                                    <dd>다큐멘터리</dd>
+                                </div>
+                                <div class="item-time">
+                                    <dt>시간</dt>
+                                    <dd>104분</dd>
+                                </div>
+                                <div>
+                                    <dt>개봉</dt>
+                                    <dd>2021.08.12</dd>
+                                </div>
+                                <div>
+                                    <dt>출연</dt>
+                                    <dd class="multi-ellipsis"></dd>
+                                </div>
+                            </dl>
+                        </article>
+                        <a href="https://search.naver.com/search.naver?where=nexearch&sm=tab_etc&mra=bkEw&pkid=68&os=11842001&qvt=0&query=%EC%95%94%EC%82%B4%EC%9E%90%EB%93%A4%20%EC%83%81%EC%98%81%EC%9D%BC%EC%A0%95" class="link-reserve">Reserve</a>
+                        <a href="https://movie.naver.com/movie/bi/mi/mediaView.naver?code=191929&mid=49960" class="link-teaser">Teaser</a>
+                    </li>
+                    <li>
+                        <article>
+                            <h4 class="sr-only">Movie Information</h4>
+                            <a href="https://search.naver.com/search.naver?where=nexearch&sm=tab_etc&pkid=68&os=10195664&qvt=0&query=%EB%8D%94%20%ED%86%A8%3A%20%ED%95%A8%EC%A0%95" class="link-movie">
+                                <img src="src/img/14.jpg" alt="더 톨: 함정">
+                            </a>
+                            <strong class="title-movie sl-ellipsis">더 톨: 함정</strong>
+                            <!--ul,ol,dl중 dl은 유일하게 자식요소로 div 가능-->
+                            <dl class="list-information">
+                                <div>
+                                    <dt>개요</dt>
+                                    <dd>공포</dd>
+                                </div>
+                                <div class="item-time">
+                                    <dt>시간</dt>
+                                    <dd>80분</dd>
+                                </div>
+                                <div>
+                                    <dt>개봉</dt>
+                                    <dd>2021.08.12</dd>
+                                </div>
+                                <div>
+                                    <dt>출연</dt>
+                                    <dd class="multi-ellipsis">
+                                        조단 헤이즈, 맥스 토플린</dd>
+                                </div>
+                            </dl>
+                        </article>
+                        <a href="#none" class="link-reserve">Reserve</a>
+                        <a href="https://movie.naver.com/movie/bi/mi/mediaView.naver?code=189078&mid=50030" class="link-teaser">Teaser</a>
+                    </li>
+                    <li>
+                        <article>
+                            <h4 class="sr-only">Movie Information</h4>
+                            <a href="https://search.naver.com/search.naver?where=nexearch&sm=tab_etc&pkid=68&os=10225526&qvt=0&query=%EA%B5%BF%EB%B0%94%EC%9D%B4%20%EB%A7%88%EB%8D%94" class="link-movie">
+                                <img src="src/img/15.jpg" alt="굿바이 마더">
+                            </a>
+                            <strong class="title-movie sl-ellipsis">굿바이 마더</strong>
+                            <!--ul,ol,dl중 dl은 유일하게 자식요소로 div 가능-->
+                            <dl class="list-information">
+                                <div>
+                                    <dt>개요</dt>
+                                    <dd>드라마</dd>
+                                </div>
+                                <div class="item-time">
+                                    <dt>시간</dt>
+                                    <dd>107분</dd>
+                                </div>
+                                <div>
+                                    <dt>개봉</dt>
+                                    <dd>2021.08.12</dd>
+                                </div>
+                                <div>
+                                    <dt>출연</dt>
+                                    <dd class="multi-ellipsis">
+                                        란 탄, 보 딘 지아 후이</dd>
+                                </div>
+                            </dl>
+                        </article>
+                        <a href="#none" class="link-reserve">Reserve</a>
+                        <a href="#none" class="link-teaser">Teaser</a>
+                    </li>
+                    <li>
+                        <article>
+                            <h4 class="sr-only">Movie Information</h4>
+                            <a href="https://search.naver.com/search.naver?where=nexearch&sm=tab_etc&pkid=68&os=16931500&qvt=0&query=%EC%8A%A4%ED%86%A0%EC%BB%A4" class="link-movie">
+                                <img src="src/img/16.jpg" alt="스토커">
+                            </a>
+                            <strong class="title-movie sl-ellipsis">스토커</strong>
+                            <!--ul,ol,dl중 dl은 유일하게 자식요소로 div 가능-->
+                            <dl class="list-information">
+                                <div>
+                                    <dt>개요</dt>
+                                    <dd>스릴러</dd>
+                                </div>
+                                <div class="item-time">
+                                    <dt>시간</dt>
+                                    <dd>86분</dd>
+                                </div>
+                                <div>
+                                    <dt>개봉</dt>
+                                    <dd>2021.08.12</dd>
+                                </div>
+                                <div>
+                                    <dt>출연</dt>
+                                    <dd class="multi-ellipsis">
+                                        크리스틴 고</dd>
+                                </div>
+                            </dl>
+                        </article>
+                        <a href="#none" class="link-reserve">Reserve</a>
+                        <a href="https://movie.naver.com/movie/bi/mi/mediaView.naver?code=199746&mid=49991" class="link-teaser">Teaser</a>
+                    </li>
+                </div>
+
+                <!-- box office -->
+                <div id="boxoffice_movie" class="hidden">
+                    <li>
+                        <article class="boxoffice_article">
+                            <h4 class="sr-only">Movie Information</h4>
+                            <div class="boxoffice_rank">1</div>
+                            <a href="https://search.naver.com/search.naver?where=nexearch&sm=tab_etc&mra=bkEw&pkid=68&os=13881020&qvt=0&query=%EB%AA%A8%EA%B0%80%EB%94%94%EC%8A%88" class="link-movie">
+                                <img src="src/img/21.jpg" alt="모가디슈">
+                            </a>
+                            <strong class="title-movie sl-ellipsis">모가디슈</strong>
+                            <!--ul,ol,dl중 dl은 유일하게 자식요소로 div 가능-->
+                            <dl class="list-information">
+                                <div>
+                                    <dt>관람객 수</dt>
+                                    <dd>7.5만명</dd>
+                                </div>
+                            </dl>
+                        </article>
+                    </li>
+                    <li>
+                        <article class="boxoffice_article">
+                            <h4 class="sr-only">Movie Information</h4>
+                            <div class="boxoffice_rank">2</div>
+                            <a href="https://search.naver.com/search.naver?where=nexearch&sm=tab_etc&mra=bkEw&pkid=68&os=6300918&qvt=0&query=%EB%8D%94%20%EC%88%98%EC%96%B4%EC%82%AC%EC%9D%B4%EB%93%9C%20%EC%8A%A4%EC%BF%BC%EB%93%9C" class="link-movie">
+                                <img src="src/img/22.jpg" alt="더 수어사이드 스쿼드">
+                            </a>
+                            <strong class="title-movie sl-ellipsis">더 수어사이드 스쿼드</strong>
+                            <!--ul,ol,dl중 dl은 유일하게 자식요소로 div 가능-->
+                            <dl class="list-information">
+                                <div>
+                                    <dt>관람객 수</dt>
+                                    <dd>2.4만명</dd>
+                                </div>
+                            </dl>
+                        </article>
+                    </li>
+                    <li>
+                        <article class="boxoffice_article">
+                            <h4 class="sr-only">Movie Information</h4>
+                            <div class="boxoffice_rank">3</div>
+                            <a href="https://search.naver.com/search.naver?where=nexearch&sm=tab_etc&mra=bkEw&pkid=68&os=11410674&qvt=0&query=%EB%B3%B4%EC%8A%A4%20%EB%B2%A0%EC%9D%B4%EB%B9%84%202" class="link-movie">
+                                <img src="src/img/23.jpg" alt="보스 베이비2">
+                            </a>
+                            <strong class="title-movie sl-ellipsis">보스 베이비2</strong>
+                            <!--ul,ol,dl중 dl은 유일하게 자식요소로 div 가능-->
+                            <dl class="list-information">
+                                <div>
+                                    <dt>관람객 수</dt>
+                                    <dd>9,544명</dd>
+                                </div>
+                            </dl>
+                        </article>
+                    </li>
+                    <li>
+                        <article class="boxoffice_article">
+                            <h4 class="sr-only">Movie Information</h4>
+                            <div class="boxoffice_rank">4</div>
+                            <a href="https://search.naver.com/search.naver?where=nexearch&sm=tab_etc&mra=bkEw&pkid=68&os=9704651&qvt=0&query=%EB%B8%94%EB%9E%99%20%EC%9C%84%EB%8F%84%EC%9A%B0" class="link-movie">
+                                <img src="src/img/24.jpg" alt="블랙 위도우">
+                            </a>
+                            <strong class="title-movie sl-ellipsis">블랙 위도우</strong>
+                            <!--ul,ol,dl중 dl은 유일하게 자식요소로 div 가능-->
+                            <dl class="list-information">
+                                <div>
+                                    <dt>관람객 수</dt>
+                                    <dd>7,572명</dd>
+                                </div>
+                            </dl>
+                        </article>
+                    </li>
+                    <li>
+                        <article class="boxoffice_article">
+                            <h4 class="sr-only">Movie Information</h4>
+                            <div class="boxoffice_rank">5</div>
+                            <a href="https://search.naver.com/search.naver?where=nexearch&sm=tab_etc&mra=bkEw&pkid=68&os=8760188&qvt=0&query=%EC%A0%95%EA%B8%80%20%ED%81%AC%EB%A3%A8%EC%A6%88" class="link-movie">
+                                <img src="src/img/25.jpg" alt="정글 크루즈">
+                            </a>
+                            <strong class="title-movie sl-ellipsis">정글 크루즈</strong>
+                            <!--ul,ol,dl중 dl은 유일하게 자식요소로 div 가능-->
+                            <dl class="list-information">
+                                <div>
+                                    <dt>관람객 수</dt>
+                                    <dd>3,154명</dd>
+                                </div>
+                            </dl>
+                        </article>
+                    </li>
+                    <li>
+                        <article class="boxoffice_article">
+                            <h4 class="sr-only">Movie Information</h4>
+                            <div class="boxoffice_rank">6</div>
+                            <a href="https://search.naver.com/search.naver?where=nexearch&sm=tab_etc&mra=bkEw&pkid=68&os=10044111&qvt=0&query=%EC%8B%B1%ED%81%AC%ED%99%80" class="link-movie">
+                                <img src="src/img/26.jpg" alt="싱크홀">
+                            </a>
+                            <strong class="title-movie sl-ellipsis">싱크홀</strong>
+                            <!--ul,ol,dl중 dl은 유일하게 자식요소로 div 가능-->
+                            <dl class="list-information">
+                                <div>
+                                    <dt>관람객 수</dt>
+                                    <dd>3,092명</dd>
+                                </div>
+                            </dl>
+                        </article>
+                    </li>
+                    <li>
+                        <article class="boxoffice_article">
+                            <h4 class="sr-only">Movie Information</h4>
+                            <div class="boxoffice_rank">7</div>
+                            <a href="https://search.naver.com/search.naver?where=nexearch&sm=tab_etc&mra=bkEw&pkid=68&os=14399912&qvt=0&query=%EA%B7%B9%EC%9E%A5%ED%8C%90%20%EB%8F%84%EB%9D%BC%EC%97%90%EB%AA%BD%3A%20%EC%A7%84%EA%B5%AC%EC%9D%98%20%EC%8B%A0%EA%B3%B5%EB%A3%A1" class="link-movie">
+                                <img src="src/img/27.jpg" alt="극장판 도라에몽: 진구의 신공룡">
+                            </a>
+                            <strong class="title-movie sl-ellipsis">극장판 도라에몽: 진구의 신공룡</strong>
+                            <!--ul,ol,dl중 dl은 유일하게 자식요소로 div 가능-->
+                            <dl class="list-information">
+                                <div>
+                                    <dt>관람객 수</dt>
+                                    <dd>2,886명</dd>
+                                </div>
+                            </dl>
+                        </article>
+                    </li>
+                    <li>
+                        <article class="boxoffice_article">
+                            <h4 class="sr-only">Movie Information</h4>
+                            <div class="boxoffice_rank">8</div>
+                            <a href="https://search.naver.com/search.naver?where=nexearch&sm=tab_etc&mra=bkEw&pkid=68&os=17168942&qvt=0&query=%EB%B0%A9%EB%B2%95%3A%20%EC%9E%AC%EC%B0%A8%EC%9D%98" class="link-movie">
+                                <img src="src/img/28.jpg" alt="방법: 재차의">
+                            </a>
+                            <strong class="title-movie sl-ellipsis">방법: 재차의</strong>
+                            <!--ul,ol,dl중 dl은 유일하게 자식요소로 div 가능-->
+                            <dl class="list-information">
+                                <div>
+                                    <dt>관람객 수</dt>
+                                    <dd>2,211명</dd>
+                                </div>
+                            </dl>
+                        </article>
+                    </li>
+                    <li>
+                        <article class="boxoffice_article">
+                            <h4 class="sr-only">Movie Information</h4>
+                            <div class="boxoffice_rank">9</div>
+                            <a href="https://search.naver.com/search.naver?where=nexearch&sm=tab_etc&mra=bkEw&pkid=68&os=18669286&qvt=0&query=%EA%B7%B8%EB%A6%B0%20%EB%82%98%EC%9D%B4%ED%8A%B8" class="link-movie">
+                                <img src="src/img/29.jpg" alt="그린 나이트">
+                            </a>
+                            <strong class="title-movie sl-ellipsis">그린 나이트</strong>
+                            <!--ul,ol,dl중 dl은 유일하게 자식요소로 div 가능-->
+                            <dl class="list-information">
+                                <div>
+                                    <dt>관람객 수</dt>
+                                    <dd>1,234명</dd>
+                                </div>
+                            </dl>
+                        </article>
+                    </li>
+                    <li>
+                        <article class="boxoffice_article">
+                            <h4 class="sr-only">Movie Information</h4>
+                            <div class="boxoffice_rank">10</div>
+                            <a href="https://search.naver.com/search.naver?where=nexearch&sm=tab_etc&mra=bkEw&pkid=68&os=18434621&qvt=0&query=%EB%9E%91%EC%A2%85" class="link-movie">
+                                <img src="src/img/30.jpg" alt="랑종">
+                            </a>
+                            <strong class="title-movie sl-ellipsis">랑종</strong>
+                            <!--ul,ol,dl중 dl은 유일하게 자식요소로 div 가능-->
+                            <dl class="list-information">
+                                <div>
+                                    <dt>관람객 수</dt>
+                                    <dd>695명</dd>
+                                </div>
+                            </dl>
+                        </article>
+                    </li>
+                </div>
             </ul>
         </section>
     </section>
@@ -312,6 +747,9 @@
             <small class="text-copy">Copyright &copy;SM</small>
         </section>
     </footer>
+
+    <script src="src/js/app.js"></script>
+    <script src="src/js/sns.js"></script>
 </body>
 
 </html>
