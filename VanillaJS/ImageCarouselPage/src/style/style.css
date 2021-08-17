@@ -1,0 +1,136 @@
+@import "reset.css";
+
+.util-ir {
+    display: block;
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+    font-size: 1px;
+    line-height: 0;
+    text-indent: -9999px;
+}
+
+.image-upload {
+    position: absolute;
+    top: 77px;
+    left: 149px;
+}
+
+#image-upload-input {
+    /*화면에서 안보이게 할 거임*/
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+#image-upload-input+label {
+    display: block;
+    width: 185px;
+    height: 54px;
+    text-align: center;
+    line-height: 54px;
+    border: 3px solid rgba(100, 100, 100, 0.8);
+    background-color: rgba(100,100,100,0.6);
+    border-radius: 10px;
+    color: #fff;
+    font-size: 18px;
+    font-family: "Noto Sans Kr", sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+#carousel {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.carousel-cont {
+    perspective: 1000px;
+}
+
+.carousel-list {
+    width: 348px;
+    height: 348px;
+    position: relative;
+    /*자식 인자들에게도 perspective를 먹이기 위함*/
+    transform-style: preserve-3d;
+    transform: rotateX(-2deg);
+}
+
+.carousel-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /*webkit-series는 internet-explorer에서 지원하지 않음*/
+    -webkit-box-reflect: below 35px linear-gradient(transparent 50%, rgba(255, 255, 255, 0.25));
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.7);
+    transition: all .5s;
+}
+
+.carousel-item:first-child {
+    transform: rotateY(0deg) translateZ(240px);
+}
+
+.carousel-item:nth-child(2) {
+    transform: rotateY(120deg) translateZ(240px) rotateY(-120deg);
+}
+
+.carousel-item:nth-child(3) {
+    transform: rotateY(240deg) translateZ(240px) rotateY(-240deg);
+}
+
+.carousel-item img {
+    display: block;
+    /*이미지 별로 다를 수 있는 규격을 맞추는 작업*/
+    width: 100%;
+    height: 100%;
+    /*internet-explorer등에서 아직 지원하지 않는 기능*/
+    filter: brightness(70%);
+}
+
+.center-img img {
+    filter: brightness(100%);
+}
+
+.prev-btn,
+.next-btn {
+    position: absolute;
+    width: 140px;
+    height: 62px;
+    top: 50%;
+    margin-top: -31px;
+    background-attachment: white;
+    border: 3px solid rgba(100, 100, 100, 0.8);
+    background-color: rgba(100, 100, 100, 0.6);
+    border-radius: 36px;
+    color: rgba(255, 255, 255);
+    font-family: "Noto Sans KR", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.prev-btn {
+    left: 149px;
+}
+
+.next-btn {
+    right: 149px;
+}
+
+.prev-btn:hover,
+.next-btn:hover {
+    border: 3px solid rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.4);
+    color: rgba(255,255,255);
+}
