@@ -59,6 +59,8 @@ function onLogoutSubmit(event) {
     toDos.forEach(()=>localStorage.removeItem(TODOS_KEY));
 }
 
+//
+
 const savedUsername = localStorage.getItem(USERNAME_KEY);
 // console.log(saveUsername);
 logoutForm.addEventListener("click", LogoutConfirm);

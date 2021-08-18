@@ -34,11 +34,16 @@
         <button type="button" class="next-btn">Next &gt;</button>
     </section>
     <form action="" class="image-upload">
-        <input type="file" accept="img/*" id="image-upload-input">
+        <input type="file" accept="img/*" id="image-upload-input" onchage="readURL(this);">
         <label for="image-upload-input">이미지 업로드</label>
+    </form>
+    <form action="" class="image-delete">
+        <button id="image-delete-input">이미지 삭제</button>
     </form>
 
     <script src="src/js/main.js"></script>
+    <script src="src/js/delete.js"></script>
+    <script src="src/js/storage.js"></script>
 </body>
 
 </html>
