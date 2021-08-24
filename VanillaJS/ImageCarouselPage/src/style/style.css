@@ -16,6 +16,12 @@
     left: 149px;
 }
 
+.image-delete {
+    position: absolute;
+    top: 77px;
+    right: 149px;
+}
+
 #image-upload-input {
     /*화면에서 안보이게 할 거임*/
     position: absolute;
@@ -32,6 +38,21 @@
     height: 54px;
     text-align: center;
     line-height: 54px;
+    border: 3px solid rgba(100, 100, 100, 0.8);
+    background-color: rgba(100, 100, 100, 0.6);
+    border-radius: 10px;
+    color: #fff;
+    font-size: 18px;
+    font-family: "Noto Sans Kr", sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+#image-delete-input {
+    display: block;
+    width: 185px;
+    height: 60px;
+    text-align: center;
     border: 3px solid rgba(100, 100, 100, 0.8);
     background-color: rgba(100, 100, 100, 0.6);
     border-radius: 10px;
