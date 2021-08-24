@@ -1,0 +1,131 @@
+#app {
+    overflow: scroll;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+img {
+    width: 100%;
+}
+
+body {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.movie-container {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    width: 673px;
+    margin: 0 auto;
+}
+
+.movie {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-left: 64px;
+}
+
+.poster-container {
+    position: absolute;
+    left: -64px;
+    width: 281px;
+    height: 396px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.content {
+    width: 608px;
+    height: 500px;
+    box-sizing: border-box;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.9);
+    border-radius: 15px;
+    padding: 64px 45px 68px 266px;
+}
+
+.content-type span {
+    color: #BDBDBD;
+}
+
+.content-type span+span::before {
+    content: '';
+    display: inline-block;
+    width: 1px;
+    height: 13px;
+    margin: 0px 7px -1px 3px;
+    background-color: #BDBDBD;
+}
+
+.content-title {
+    margin: 13px 0 114px 0;
+    font-size: 32px;
+    line-height: 46px;
+    font-weight: 700;
+}
+
+.content-favorite {
+    display: flex;
+    margin-bottom: 22px;
+}
+
+.content-favorite button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border: 2px solid #fff;
+    border-radius: 100%;
+    margin-right: 20px;
+}
+
+.button-recommend .icon-thumbs-up {
+    width: 23.8px;
+    height: 23.8px;
+    margin-top: -1px;
+    background: center / contain url(/src/assets/images/icon_thumbs_up.png) no-repeat;
+}
+
+.button-recommend.on .icon-thumbs-up {
+    background-image: url(/src/assets/images/icon_thumbs_up_fill.png);
+}
+
+.button-heart .icon-heart {
+    width: 22.6px;
+    height: 22.6px;
+    margin-top: 3px;
+    background: center / contain url(/src/assets/images/icon_heart.png) no-repeat;
+}
+
+.button-heart.on .icon-heart {
+    background-image: url(/src/assets/images/icon_heart_fill.png);
+}
+
+.star-average {
+    display: block;
+    margin-bottom: 16px;
+}
+
+.star-point-containe r {
+    display: flex;
+    align-items: center;
+}
+
+.star-background {
+    display: flex;
+    /* width: 250px;
+    height: 50px; */
+}
+
+.star-background img {
+    /* width: auto; */
+    width: 50px;
+}
+
+.icon-remove-star {
+    width: 22px;
+    height: 22px;
+    margin-left: 12px;
+}
