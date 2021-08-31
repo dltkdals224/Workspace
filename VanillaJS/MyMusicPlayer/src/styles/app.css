@@ -1,0 +1,34 @@
+:root {
+    --main-color: rgba(20, 20, 20, 1);
+}
+
+#app {
+    height: calc(100vh - 80px);
+    width: 100%;
+}
+
+img {
+    width: 100%;
+}
+
+.intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--main-color);
+    z-index: 9000;
+
+    /*서서히 사라지는 효과*/
+    /*10초로 바꾸어 10초동안 천천히 사라지게 해도 App.js에서 1초만에 사라지게 해놓음*/
+    transition: all ease-in-out 1s;
+}
+
+.intro img {
+    width: 134px;
+    height: 63px;
+}
