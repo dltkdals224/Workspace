@@ -87,7 +87,7 @@ body {
     width: 23.8px;
     height: 23.8px;
     margin-top: -1px;
-    background: center / contain url(/src/assets/images/icon_thumbs_up.png) no-repeat;
+    background: center / contain url(../assets/images/icon_thumbs_up.png) no-repeat;
 }
 
 .button-recommend.on {
@@ -95,14 +95,14 @@ body {
 }
 
 .button-recommend.on .icon-thumbs-up {
-    background-image: url(/src/assets/images/icon_thumbs_up_fill.png);
+    background-image: url(../assets/images/icon_thumbs_up_fill.png);
 }
 
 .button-heart .icon-heart {
     width: 22.6px;
     height: 22.6px;
     margin-top: 3px;
-    background: center / contain url(/src/assets/images/icon_heart.png) no-repeat;
+    background: center / contain url(../assets/images/icon_heart.png) no-repeat;
 }
 
 .button-heart.on {
@@ -110,7 +110,7 @@ body {
 }
 
 .button-heart.on .icon-heart {
-    background-image: url(/src/assets/images/icon_heart_fill.png);
+    background-image: url(../assets/images/icon_heart_fill.png);
 }
 
 .star-average {
